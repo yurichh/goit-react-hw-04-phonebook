@@ -7,8 +7,8 @@ import Notiflix from 'notiflix';
 import React from 'react';
 
 const App = () => {
-  const [contacts, setContacts] = useState(() =>
-    JSON.parse(localStorage.getItem('contacts'))
+  const [contacts, setContacts] = useState(
+    () => JSON.parse(localStorage.getItem('contacts')) || []
   );
 
   const [filter, setFilter] = useState('');
